@@ -90,6 +90,39 @@
                 </div>
             </section>
 
+            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h1 class="text-center">Appointments Stacked</h1>
+                <textarea id="emailMessage">Add your email message here</textarea>
+                <button id="emailMessageBtn">add email message</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="authorize-div" style="">
+      <span>Authorize access to Google Calendar API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output"></pre>
+
+
+    
+    <!-- Button that handles sign-in/sign-out -->
+    <button id="quickstart-sign-in">Sign in with Google</button>
+
+    <!-- Container where we'll display the user details -->
+    <div>
+        Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+        <div>Firebase auth <code>currentUser</code> object value:</div>
+        <pre><code id="quickstart-account-details">null</code></pre>
+        <div>Google OAuth Access Token:</div>
+        <pre><code id="quickstart-oauthtoken">null</code></pre>
+    </div>
+
             <footer id="footer">
                 Copyright &copy; 2015 Material Admin
             </footer>
@@ -182,10 +215,12 @@
         <script src="js/actions.js"></script>
        <!--  <script src="js/demo.js"></script> -->
 
-       <!-- FIREBASE - chris added 1/20/17 -->
+        <!-- FIREBASE API -->
         <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+        <!-- Google AUTH API -->
+        <script src="https://apis.google.com/js/client.js"></script>
+        <!-- CUSTOM AUTHOR CSS -->
         <script src="js/main.js"></script>
         
-
     </body>
   </html>
